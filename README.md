@@ -1,2 +1,2 @@
 # cfx-switchcase
-Copy and Paste me :o)
+Copy and Paste me Nothing to lose :o)
