@@ -4,6 +4,20 @@ local switch = setmetatable({},{__call=function(a,b)case=setmetatable({},{__call
 --notepad replace case (.*): with case\(\1\)\(function\(\)
 --notepad replace switch(.*\()(.*\)) with switch\(\2\(
 --notepad replace break; with end),
+function Check(n)
+	return switch(n)(
+            case(1,4)(function()
+				return 4
+            end),
+			case(4)(function()
+				return 41
+            end),
+            default(function()
+				return 9
+            end )
+    )
+end 
+print(Check(4))
 CreateThread(function()
     while true do Wait(0) 
         local a = 4
